@@ -55,9 +55,9 @@ General pattern:
 
 - **last**: Before now e.g. *lastYear* = year before now
 
-- **coming**: The given unit is not included e.g. *comingYear* = year after (not including) this year
+- **coming**: The current given unit is not included e.g. *comingYear* = year after (not including) this year
 
-- **previous**: The given unit is not included e.g. *previousMonth* = month before (not including) this month
+- **previous**: The current given unit is not included e.g. *previousMonth* = month before (not including) this month
 
 - **APIs with plural version**: Take single *Number* parameter (default 1) e.g. *nextMonths(2)*, *comingYears(3)*, *lastWeeks(4)* 
 
