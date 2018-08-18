@@ -4,7 +4,7 @@
 
 ## Description
 
-Builds common query objects for commonly used mongo date queries. Works with both [mongoose](https://www.npmjs.com/package/mongoose) and [mongodb](https://www.npmjs.com/package/mongodb). All dates are in UTC.
+Builds query objects for commonly used mongo date queries. Works with both [mongoose](https://www.npmjs.com/package/mongoose) and [mongodb](https://www.npmjs.com/package/mongodb). All dates are in UTC.
 
 ## Install
 
