@@ -1,4 +1,4 @@
-# mongo-date-query 
+# mongo-date-query [![Build Status](https://travis-ci.com/TalhaAwan/mongo-date-query.svg?branch=master)](https://travis-ci.com/TalhaAwan/mongo-date-query)
 
 > Mongo date query helper for common queries
 
