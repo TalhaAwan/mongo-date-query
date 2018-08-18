@@ -1,6 +1,6 @@
 {
   "name": "mongo-date-query",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Mongo date query helper for common queries",
   "main": "index.js",
   "repository": "TalhaAwan/mongo-date-query",
