@@ -1,0 +1,28 @@
+{
+  "name": "mongo-date-query",
+  "version": "1.0.0",
+  "description": "Mongo date query helper for common queries",
+  "main": "index.js",
+  "repository": "TalhaAwan/mongo-date-query",
+  "homepage": "https://github.com/TalhaAwan/mongo-date-query#readme",
+  "scripts": {
+    "test": "xo && ava"
+  },
+  "keywords": [
+    "mongo",
+    "mongodb",
+    "mongoose",
+    "date",
+    "query"
+  ],
+  "author": "Talha Awan",
+  "license": "MIT",
+  "devDependencies": {
+    "ava": "^0.21.0",
+    "mockdate": "^2.0.2",
+    "xo": "^0.21.1"
+  },
+  "dependencies": {
+    "moment": "^2.22.2"
+  }
+}
