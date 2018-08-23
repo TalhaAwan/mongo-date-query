@@ -49,21 +49,21 @@ collection.find({expireDate: mdq.afterNextMonth()}).toArray(function(err, users)
 ## APIs
 
 General pattern:
-- **this**: Includes start and end of a unit (*thisHour*, *thisYear* etc.)
+- **this**: Start and end of a time unit [*thisHour*, *thisYear* etc.]
 
-- **next**: From now e.g. *nextMonth* = month from now
+- **next**: From now [*nextMonth* = month from now]
 
-- **last**: Before now e.g. *lastYear* = year before now
+- **last**: Before now [*lastYear* = year before now]
 
-- **coming**: The current given unit is not included e.g. *comingYear* = year after (not including) this year
+- **coming**: The current given unit is not included [*comingYear* = year after (not including) this year]
 
-- **previous**: The current given unit is not included e.g. *previousMonth* = month before (not including) this month
+- **previous**: The current given unit is not included [*previousMonth* = month before (not including) this month]
 
-- **APIs with plural version**: Take single *Number* parameter (default 1) e.g. *nextMonths(2)*, *comingYears(3)*, *lastWeeks(4)* 
+- **APIs with plural version**: Take *Number* parameter (default 1) [*nextMonths(2)*, *comingYears(3)*, *lastWeeks(4)*]
 
-- **before**: Before the given unit e.g. *beforePreviousMonths(2)*, *beforeLastSeconds(30)*
+- **before**: Before the given unit [*beforePreviousMonths(2)*, *beforeLastSeconds(30)*]
 
-- **after**: After the given unit e.g. *afterThisWeek*, *afterComingYears(5)*
+- **after**: After the given unit [*afterThisWeek*, *afterComingYears(5)*]
 
 ### thisSecond()
 ### nextSecond()
