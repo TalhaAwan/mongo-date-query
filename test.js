@@ -998,6 +998,111 @@ test('afterNextYears', t => {
 	});
 });
 
+test('lastToNextSeconds', t => {
+	t.deepEqual(m.lastToNextSeconds(), {
+		$gte: new Date('2018-08-14T12:07:06Z'),
+		$lte: new Date('2018-08-14T12:07:08Z')
+	});
+	t.deepEqual(m.lastToNextSeconds(2), {
+		$gte: new Date('2018-08-14T12:07:05Z'),
+		$lte: new Date('2018-08-14T12:07:08Z')
+	});
+	t.deepEqual(m.lastToNextSeconds(3, 7), {
+		$gte: new Date('2018-08-14T12:07:04Z'),
+		$lte: new Date('2018-08-14T12:07:14Z')
+	});
+});
+
+test('lastToNextMinutes', t => {
+	t.deepEqual(m.lastToNextMinutes(), {
+		$gte: new Date('2018-08-14T12:06:07Z'),
+		$lte: new Date('2018-08-14T12:08:07Z')
+	});
+	t.deepEqual(m.lastToNextMinutes(2), {
+		$gte: new Date('2018-08-14T12:05:07Z'),
+		$lte: new Date('2018-08-14T12:08:07Z')
+	});
+	t.deepEqual(m.lastToNextMinutes(3, 7), {
+		$gte: new Date('2018-08-14T12:04:07Z'),
+		$lte: new Date('2018-08-14T12:14:07Z')
+	});
+});
+
+test('lastToNextHours', t => {
+	t.deepEqual(m.lastToNextHours(), {
+		$gte: new Date('2018-08-14T11:07:07Z'),
+		$lte: new Date('2018-08-14T13:07:07Z')
+	});
+	t.deepEqual(m.lastToNextHours(2), {
+		$gte: new Date('2018-08-14T10:07:07Z'),
+		$lte: new Date('2018-08-14T13:07:07Z')
+	});
+	t.deepEqual(m.lastToNextHours(3, 7), {
+		$gte: new Date('2018-08-14T09:07:07Z'),
+		$lte: new Date('2018-08-14T19:07:07Z')
+	});
+});
+
+test('lastToNextDays', t => {
+	t.deepEqual(m.lastToNextDays(), {
+		$gte: new Date('2018-08-13T12:07:07Z'),
+		$lte: new Date('2018-08-15T12:07:07Z')
+	});
+	t.deepEqual(m.lastToNextDays(2), {
+		$gte: new Date('2018-08-12T12:07:07Z'),
+		$lte: new Date('2018-08-15T12:07:07Z')
+	});
+	t.deepEqual(m.lastToNextDays(3, 7), {
+		$gte: new Date('2018-08-11T12:07:07Z'),
+		$lte: new Date('2018-08-21T12:07:07Z')
+	});
+});
+
+test('lastToNextWeeks', t => {
+	t.deepEqual(m.lastToNextWeeks(), {
+		$gte: new Date('2018-08-07T12:07:07Z'),
+		$lte: new Date('2018-08-21T12:07:07Z')
+	});
+	t.deepEqual(m.lastToNextWeeks(2), {
+		$gte: new Date('2018-07-31T12:07:07Z'),
+		$lte: new Date('2018-08-21T12:07:07Z')
+	});
+	t.deepEqual(m.lastToNextWeeks(3, 7), {
+		$gte: new Date('2018-07-24T12:07:07Z'),
+		$lte: new Date('2018-10-02T12:07:07Z')
+	});
+});
+
+test('lastToNextMonths', t => {
+	t.deepEqual(m.lastToNextMonths(), {
+		$gte: new Date('2018-07-14T12:07:07Z'),
+		$lte: new Date('2018-09-14T12:07:07Z')
+	});
+	t.deepEqual(m.lastToNextMonths(2), {
+		$gte: new Date('2018-06-14T12:07:07Z'),
+		$lte: new Date('2018-09-14T12:07:07Z')
+	});
+	t.deepEqual(m.lastToNextMonths(3, 7), {
+		$gte: new Date('2018-05-14T12:07:07Z'),
+		$lte: new Date('2019-03-14T12:07:07Z')
+	});
+});
+
+test('lastToNextYears', t => {
+	t.deepEqual(m.lastToNextYears(), {
+		$gte: new Date('2017-08-14T12:07:07Z'),
+		$lte: new Date('2019-08-14T12:07:07Z')
+	});
+	t.deepEqual(m.lastToNextYears(2), {
+		$gte: new Date('2016-08-14T12:07:07Z'),
+		$lte: new Date('2019-08-14T12:07:07Z')
+	});
+	t.deepEqual(m.lastToNextYears(3, 7), {
+		$gte: new Date('2015-08-14T12:07:07Z'),
+		$lte: new Date('2025-08-14T12:07:07Z')
+	});
+});
+
 test.after(() => {
 	MockDate.reset();
 });

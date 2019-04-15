@@ -65,6 +65,8 @@ General pattern:
 
 - **after**: After the given unit [*afterThisWeek*, *afterComingYears(5)*]
 
+- **lastToNext**: from last time unit to next (default 1) [*lastToNextMinutes()* = from last minute to next minute, *lastToNextDays(2)* = from last 2 days till tomorrow, *lastToNextMonths(3, 4)* = from last 3 months to next 4]
+
 ### thisSecond()
 ### nextSecond()
 ### nextSeconds(Number)
@@ -190,6 +192,13 @@ General pattern:
 ### afterComingYears(Number)
 ### afterNextYear()
 ### afterNextYears(Number)
+### lastToNextSeconds(Number, Number)
+### lastToNextMinutes(Number, Number)
+### lastToNextHours(Number, Number)
+### lastToNextDays(Number, Number)
+### lastToNextWeeks(Number, Number)
+### lastToNextMonths(Number, Number)
+### lastToNextYears(Number, Number)
 
 ## License
 

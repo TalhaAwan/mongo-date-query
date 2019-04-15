@@ -809,6 +809,55 @@ const afterNextYears = function (num = 1) {
 	};
 };
 
+const lastToNextSeconds = function (last = 1, next = 1) {
+	return {
+		$gte: moment().utc().subtract(last, 'second').toDate(),
+		$lte: moment().utc().add(next, 'second').toDate()
+	};
+};
+
+const lastToNextMinutes = function (last = 1, next = 1) {
+	return {
+		$gte: moment().utc().subtract(last, 'minute').toDate(),
+		$lte: moment().utc().add(next, 'minute').toDate()
+	};
+};
+
+const lastToNextHours = function (last = 1, next = 1) {
+	return {
+		$gte: moment().utc().subtract(last, 'hour').toDate(),
+		$lte: moment().utc().add(next, 'hour').toDate()
+	};
+};
+
+const lastToNextDays = function (last = 1, next = 1) {
+	return {
+		$gte: moment().utc().subtract(last, 'day').toDate(),
+		$lte: moment().utc().add(next, 'day').toDate()
+	};
+};
+
+const lastToNextWeeks = function (last = 1, next = 1) {
+	return {
+		$gte: moment().utc().subtract(last, 'week').toDate(),
+		$lte: moment().utc().add(next, 'week').toDate()
+	};
+};
+
+const lastToNextMonths = function (last = 1, next = 1) {
+	return {
+		$gte: moment().utc().subtract(last, 'month').toDate(),
+		$lte: moment().utc().add(next, 'month').toDate()
+	};
+};
+
+const lastToNextYears = function (last = 1, next = 1) {
+	return {
+		$gte: moment().utc().subtract(last, 'year').toDate(),
+		$lte: moment().utc().add(next, 'year').toDate()
+	};
+};
+
 module.exports = {
 	thisSecond,
 	nextSecond,
@@ -934,5 +983,12 @@ module.exports = {
 	afterComingYear,
 	afterComingYears,
 	afterNextYear,
-	afterNextYears
+	afterNextYears,
+	lastToNextSeconds,
+	lastToNextMinutes,
+	lastToNextHours,
+	lastToNextDays,
+	lastToNextWeeks,
+	lastToNextMonths,
+	lastToNextYears
 };
