@@ -998,6 +998,13 @@ test('afterNextYears', t => {
 	});
 });
 
+test('lastToNextSecond', t => {
+	t.deepEqual(m.lastToNextSecond(), {
+		$gte: new Date('2018-08-14T12:07:06Z'),
+		$lte: new Date('2018-08-14T12:07:08Z')
+	});
+});
+
 test('lastToNextSeconds', t => {
 	t.deepEqual(m.lastToNextSeconds(), {
 		$gte: new Date('2018-08-14T12:07:06Z'),
@@ -1010,6 +1017,13 @@ test('lastToNextSeconds', t => {
 	t.deepEqual(m.lastToNextSeconds(3, 7), {
 		$gte: new Date('2018-08-14T12:07:04Z'),
 		$lte: new Date('2018-08-14T12:07:14Z')
+	});
+});
+
+test('lastToNextMinute', t => {
+	t.deepEqual(m.lastToNextMinute(), {
+		$gte: new Date('2018-08-14T12:06:07Z'),
+		$lte: new Date('2018-08-14T12:08:07Z')
 	});
 });
 
@@ -1028,6 +1042,13 @@ test('lastToNextMinutes', t => {
 	});
 });
 
+test('lastToNextHour', t => {
+	t.deepEqual(m.lastToNextHour(), {
+		$gte: new Date('2018-08-14T11:07:07Z'),
+		$lte: new Date('2018-08-14T13:07:07Z')
+	});
+});
+
 test('lastToNextHours', t => {
 	t.deepEqual(m.lastToNextHours(), {
 		$gte: new Date('2018-08-14T11:07:07Z'),
@@ -1043,6 +1064,13 @@ test('lastToNextHours', t => {
 	});
 });
 
+test('lastToNextDay', t => {
+	t.deepEqual(m.lastToNextDay(), {
+		$gte: new Date('2018-08-13T12:07:07Z'),
+		$lte: new Date('2018-08-15T12:07:07Z')
+	});
+});
+
 test('lastToNextDays', t => {
 	t.deepEqual(m.lastToNextDays(), {
 		$gte: new Date('2018-08-13T12:07:07Z'),
@@ -1054,6 +1082,13 @@ test('lastToNextDays', t => {
 	});
 	t.deepEqual(m.lastToNextDays(3, 7), {
 		$gte: new Date('2018-08-11T12:07:07Z'),
+		$lte: new Date('2018-08-21T12:07:07Z')
+	});
+});
+
+test('lastToNextWeek', t => {
+	t.deepEqual(m.lastToNextWeek(), {
+		$gte: new Date('2018-08-07T12:07:07Z'),
 		$lte: new Date('2018-08-21T12:07:07Z')
 	});
 });
@@ -1073,6 +1108,13 @@ test('lastToNextWeeks', t => {
 	});
 });
 
+test('lastToNextMonth', t => {
+	t.deepEqual(m.lastToNextMonth(), {
+		$gte: new Date('2018-07-14T12:07:07Z'),
+		$lte: new Date('2018-09-14T12:07:07Z')
+	});
+});
+
 test('lastToNextMonths', t => {
 	t.deepEqual(m.lastToNextMonths(), {
 		$gte: new Date('2018-07-14T12:07:07Z'),
@@ -1085,6 +1127,13 @@ test('lastToNextMonths', t => {
 	t.deepEqual(m.lastToNextMonths(3, 7), {
 		$gte: new Date('2018-05-14T12:07:07Z'),
 		$lte: new Date('2019-03-14T12:07:07Z')
+	});
+});
+
+test('lastToNextYear', t => {
+	t.deepEqual(m.lastToNextYear(), {
+		$gte: new Date('2017-08-14T12:07:07Z'),
+		$lte: new Date('2019-08-14T12:07:07Z')
 	});
 });
 

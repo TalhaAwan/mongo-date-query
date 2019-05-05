@@ -809,10 +809,24 @@ const afterNextYears = function (num = 1) {
 	};
 };
 
+const lastToNextSecond = function () {
+	return {
+		$gte: moment().utc().subtract(1, 'second').toDate(),
+		$lte: moment().utc().add(1, 'second').toDate()
+	};
+};
+
 const lastToNextSeconds = function (last = 1, next = 1) {
 	return {
 		$gte: moment().utc().subtract(last, 'second').toDate(),
 		$lte: moment().utc().add(next, 'second').toDate()
+	};
+};
+
+const lastToNextMinute = function () {
+	return {
+		$gte: moment().utc().subtract(1, 'minute').toDate(),
+		$lte: moment().utc().add(1, 'minute').toDate()
 	};
 };
 
@@ -823,10 +837,24 @@ const lastToNextMinutes = function (last = 1, next = 1) {
 	};
 };
 
+const lastToNextHour = function () {
+	return {
+		$gte: moment().utc().subtract(1, 'hour').toDate(),
+		$lte: moment().utc().add(1, 'hour').toDate()
+	};
+};
+
 const lastToNextHours = function (last = 1, next = 1) {
 	return {
 		$gte: moment().utc().subtract(last, 'hour').toDate(),
 		$lte: moment().utc().add(next, 'hour').toDate()
+	};
+};
+
+const lastToNextDay = function () {
+	return {
+		$gte: moment().utc().subtract(1, 'day').toDate(),
+		$lte: moment().utc().add(1, 'day').toDate()
 	};
 };
 
@@ -837,6 +865,13 @@ const lastToNextDays = function (last = 1, next = 1) {
 	};
 };
 
+const lastToNextWeek = function () {
+	return {
+		$gte: moment().utc().subtract(1, 'week').toDate(),
+		$lte: moment().utc().add(1, 'week').toDate()
+	};
+};
+
 const lastToNextWeeks = function (last = 1, next = 1) {
 	return {
 		$gte: moment().utc().subtract(last, 'week').toDate(),
@@ -844,10 +879,24 @@ const lastToNextWeeks = function (last = 1, next = 1) {
 	};
 };
 
+const lastToNextMonth = function () {
+	return {
+		$gte: moment().utc().subtract(1, 'month').toDate(),
+		$lte: moment().utc().add(1, 'month').toDate()
+	};
+};
+
 const lastToNextMonths = function (last = 1, next = 1) {
 	return {
 		$gte: moment().utc().subtract(last, 'month').toDate(),
 		$lte: moment().utc().add(next, 'month').toDate()
+	};
+};
+
+const lastToNextYear = function () {
+	return {
+		$gte: moment().utc().subtract(1, 'year').toDate(),
+		$lte: moment().utc().add(1, 'year').toDate()
 	};
 };
 
@@ -984,11 +1033,18 @@ module.exports = {
 	afterComingYears,
 	afterNextYear,
 	afterNextYears,
+	lastToNextSecond,
 	lastToNextSeconds,
+	lastToNextMinute,
 	lastToNextMinutes,
+	lastToNextHour,
 	lastToNextHours,
+	lastToNextDay,
 	lastToNextDays,
+	lastToNextWeek,
 	lastToNextWeeks,
+	lastToNextMonth,
 	lastToNextMonths,
+	lastToNextYear,
 	lastToNextYears
 };
