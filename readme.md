@@ -4,7 +4,9 @@
 
 ## Description
 
-Builds query objects for commonly used mongo date queries. Works with both [mongoose](https://www.npmjs.com/package/mongoose) and [mongodb](https://www.npmjs.com/package/mongodb). All dates are in UTC.
+Builds query objects for commonly used mongo date queries. Helpful in generating data for tables, graphs, and charts. 
+
+Works with both [mongoose](https://www.npmjs.com/package/mongoose) and [mongodb](https://www.npmjs.com/package/mongodb). All dates are in UTC. 
 
 ## Install
 
@@ -192,12 +194,19 @@ General pattern:
 ### afterComingYears(Number)
 ### afterNextYear()
 ### afterNextYears(Number)
+### lastToNextSecond()
 ### lastToNextSeconds(Number, Number)
+### lastToNextMinute()
 ### lastToNextMinutes(Number, Number)
+### lastToNextHour()
 ### lastToNextHours(Number, Number)
+### lastToNextDay()
 ### lastToNextDays(Number, Number)
+### lastToNextWeek()
 ### lastToNextWeeks(Number, Number)
+### lastToNextMonth()
 ### lastToNextMonths(Number, Number)
+### lastToNextYear()
 ### lastToNextYears(Number, Number)
 
 ## License
