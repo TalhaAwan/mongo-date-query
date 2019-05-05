@@ -49,23 +49,23 @@ collection.find({expireDate: mdq.afterNextMonth()}).toArray(function(err, users)
 ## APIs
 
 General pattern:
-- **this**: Start and end of a time unit [*thisHour*, *thisYear* etc.]
+- **this**: Start and end of a time unit [*thisHour()*, *thisYear()* etc.]
 
-- **next**: From now [*nextMonth* = month from now]
+- **next**: From now [*nextMonth()* = month from now]
 
-- **last**: Before now [*lastYear* = year before now]
+- **last**: Before now [*lastYear()* = year before now]
 
-- **coming**: The current given unit is not included [*comingYear* = year after (not including) this year]
+- **coming**: The current given unit is not included [*comingYear()* = year after (not including) this year]
 
-- **previous**: The current given unit is not included [*previousMonth* = month before (not including) this month]
+- **previous**: The current given unit is not included [*previousMonth()* = month before (not including) this month]
 
-- **APIs with plural version**: Take *Number* parameter (default 1) [*nextMonths(2)*, *comingYears(3)*, *lastWeeks(4)*]
+- **before**: Before the given unit [*beforePreviousMonth()*, *beforeLastMinute()*]
 
-- **before**: Before the given unit [*beforePreviousMonths(2)*, *beforeLastSeconds(30)*]
+- **after**: After the given unit [*afterThisWeek()*, *afterNextMonth()*, *afterComingYear()*]
 
-- **after**: After the given unit [*afterThisWeek*, *afterComingYears(5)*]
+- **lastToNext**: From last time unit to next [*lastToNextMinute()* = from last minute to next minute, *lastToNextDay()* = from last 24 hours to next 24 hours]
 
-- **lastToNext**: from last time unit to next (default 1) [*lastToNextMinutes()* = from last minute to next minute, *lastToNextDays(2)* = from last 2 days till tomorrow, *lastToNextMonths(3, 4)* = from last 3 months to next 4]
+- **APIs with plural version**: Take *Number* parameter(s). Default is 1. [*nextMonths(2)*, *comingYears(3)*, *lastWeeks(4)*, *beforePreviousMonths(3)*, *afterComingYears(5)* *lastToNextDays(3, 4)*]
 
 ### thisSecond()
 ### nextSecond()
