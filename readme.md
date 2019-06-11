@@ -209,6 +209,10 @@ General pattern:
 ### lastToNextYear()
 ### lastToNextYears(Number, Number)
 
+## Related
+
+- [mongo-query-helper](https://www.npmjs.com/package/mongo-query-helper) helper for common and repetitive queries 
+
 ## License
 
 MIT © Talha Awan
