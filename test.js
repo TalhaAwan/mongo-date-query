@@ -7,6 +7,10 @@ test.before(() => {
 	MockDate.set(moment('2018-08-14T12:07:07Z'));
 });
 
+test.after(() => {
+	MockDate.reset();
+});
+
 test('thisSecond', t => {
 	t.deepEqual(m.thisSecond(), {
 		$gt: new Date('2018-08-14T12:07:06Z'),
@@ -1150,8 +1154,4 @@ test('lastToNextYears', t => {
 		$gte: new Date('2015-08-14T12:07:07Z'),
 		$lte: new Date('2025-08-14T12:07:07Z')
 	});
-});
-
-test.after(() => {
-	MockDate.reset();
 });
