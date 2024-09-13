@@ -1,0 +1,36 @@
+name: build
+on:
+  push:
+    branches:
+      - "master"
+    paths:
+      - "src/**"
+  pull_request:
+    branches:
+      - "master"
+    paths:
+      - "src/**"
+
+jobs:
+  test:
+    defaults:
+      run:
+        working-directory: src/__tests__
+    env:
+      NODE_VERSION: 20.15.0
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/checkout@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+
+      - name: Execute Unit Tests
+        run: |
+          npm ci
+          npm test
