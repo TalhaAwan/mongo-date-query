@@ -1,6 +1,6 @@
 {
   "name": "mongo-date-query",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "Mongo date query helper for common queries",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
