@@ -18,17 +18,25 @@ $ npm install mongo-date-query
 
 ## Usage
 
+### ES Module
+
+```js
+import mdq from "mongo-date-query";
+```
+
+### CommonJS
+
+```js
+const mdq = require("mongo-date-query");
+```
+
+## Example
+
 ```js
 import mdq from "mongo-date-query";
 
 //mongoose
-User.find({ createdAt: mdq.today() }, function (err, users) {
-  if (!err) {
-    console.log(users);
-  }
-});
-
-User.find({ updatedAt: mdq.lastWeek() }, function (err, users) {
+User.find({ createdAt: mdq.lastWeek() }, function (err, users) {
   if (!err) {
     console.log(users);
   }
@@ -41,14 +49,6 @@ collection.find({ createdAt: mdq.yesterday() }).toArray(function (err, users) {
     console.log(users);
   }
 });
-
-collection
-  .find({ expireDate: mdq.afterNextMonth() })
-  .toArray(function (err, users) {
-    if (!err) {
-      console.log(users);
-    }
-  });
 ```
 
 ## APIs
@@ -350,10 +350,6 @@ General pattern:
 ### lastToNextYear()
 
 ### lastToNextYears(Number, Number)
-
-## Related
-
-- [mongo-query-helper](https://www.npmjs.com/package/mongo-query-helper) helper for common and repetitive queries
 
 ## License
 
