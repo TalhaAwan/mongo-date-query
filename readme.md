@@ -19,7 +19,7 @@ $ npm install mongo-date-query
 ## Usage
 
 ```js
-const mdq = require("mongo-date-query");
+import mdq from "mongo-date-query";
 
 //mongoose
 User.find({ createdAt: mdq.today() }, function (err, users) {
