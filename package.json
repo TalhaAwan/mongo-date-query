@@ -5,7 +5,10 @@
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
-  "repository": "TalhaAwan/mongo-date-query",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TalhaAwan/mongo-date-query.git"
+  },
   "files": [
     "dist"
   ],
