@@ -3,7 +3,6 @@ import moment from 'moment';
 import m from '../index';
 
 describe('MongoDate', () => {
-
   beforeAll(() => {
     MockDate.set(moment('2018-08-14T12:07:07Z').toString());
   });
