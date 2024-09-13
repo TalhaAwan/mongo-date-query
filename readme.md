@@ -71,7 +71,7 @@ General pattern:
 
 - **lastToNext**: From last time unit to next [*lastToNextMinute()* = from last minute to next minute, *lastToNextDay()* = from last 24 hours to next 24 hours]
 
-- **APIs with plural version**: Take _Number_ parameter(s). Default is 1. [*nextMonths(2)*, *comingYears(3)*, *lastWeeks(4)*, *beforePreviousMonths(3)*, *afterComingYears(5)* *lastToNextDays(3, 4)*]
+- **APIs with plural version**: Takes a _Number_ parameter. Default is 1. [*nextMonths(2)*, *comingYears(3)*, *lastWeeks(4)*, *beforePreviousMonths(3)*, *afterComingYears(5)* *lastToNextDays(3, 4)*]
 
 ### thisSecond()
 
